@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const ApiExample = () => {
   const [data, setData] = useState([]);
-  const [count, setCount] = useState(true);
+  const [count, setCount] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,7 +30,7 @@ const ApiExample = () => {
       ) : (
         <p>Loading...</p>
       )}
-      <h2>{count ? 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo praesentium minus error odio tempora quisquam architecto suscipit recusandae nihil? Molestiae adipisci laborum alias odit iste dolores quod at voluptate natus!': 'not found' }</h2>
+      <h2>{count ? 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo praesentium minus error odio tempora quisquam architecto suscipit recusandae nihil? Molestiae adipisci laborum alias odit iste dolores quod at voluptate natus!': 'no' }</h2>
     <button onClick={() => setCount(true)}>no</button>
     <button onClick={() => setCount(false)}>yes</button>
     </div>
